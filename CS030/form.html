@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+</head>
+<body>
+
+<form autocomplete="on">
+  <fieldset style="border: 2px solid #000; padding: 20px; margin-bottom: 20px;">
+    <legend style="font-weight: bold; font-size: 1.2em;">Customer Info</legend>
+
+    <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" autofocus required><br><br>
+
+    <label for="telephone" style="display: block; margin-bottom: 5px;">Telephone:</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="Enter your phone number" pattern="\d{10}" autofocus required><br><br>
+
+    <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" multiple autofocus required><br><br>
+
+  </fieldset>
+
+  <fieldset style="border: 2px solid #000; padding: 20px;">
+    <legend style="font-weight: bold; font-size: 1.2em;">Books</legend>
+
+    <label for="book" style="display: block; margin-bottom: 5px;">Book:</label>
+    <input list="books" id="book" name="book" placeholder="Choose a book" style="padding: 8px; margin-bottom: 10px; width: 100%;">
+    <datalist id="books">
+      <option value="Book1">
+      <option value="Book2">
+      <option value="Book3">
+      <option value="Book4">
+      <option value="Book5">
+    </datalist>
+
+    <label for="quantity" style="display: block; margin-bottom: 5px;">Quantity (1-5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5" autofocus required><br><br>
+
+  </fieldset>
+
+  <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Submit</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.up{
+    height: 20 px;
+    width: 190px;
+    text-align: center;
+    background-color: aqua;
+    margin: 10% 20px 20px ;
+    padding: 5px;
+    margin-left: 35%;
+    border: 3px solid black;
+}
+
+.in{
+    height: 30px;
+    width: 190px;
+    background-color: peachpuff;
+    margin: 20px 20px 20px  ;
+    margin-left: 35%;
+    padding: 6px;   
+    border: 3px;
+}
+
+.hobby{
+    height: 8   0px;
+    width: 190px;
+    margin: 20px 20px 20px ;
+    margin-left: 35%;
+    background-color: peachpuff;
+    padding: 6px;   
+    border: 3px;
+}
