@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Scope Quiz</title>
+</head>
+<body>
+  <h1>JavaScript Scope Quiz</h1>
+  <button onclick="questionOne()">Question 1</button>
+  <button onclick="questionTwo()">Question 2</button>
+  <button onclick="questionThree()">Question 3</button>
+  <button onclick="reviewScore()">Review Score</button>
+  <button onclick="tryLocalScore()">Bonus: Try Local Score</button>
+  <p id="output"></p>
+
+  <script>
+    var globalScore = 0;
+
+    function questionOne() {
+      var answer = prompt("What is 2 + 2?");
+      var localScore = 0;
+      if (answer == "4") {
+        globalScore++;
+        localScore++;
+      }
+      document.getElementById("output").innerText = "Question 1 answered.";
+    }
+
+    const questionTwo = function() {
+      var answer = prompt("What is the capital of Saudi Arabia?");
+      var localScore = 0;
+      if (answer && answer.toLowerCase() === "riyadh") {
+        globalScore++;
+        localScore++;
+      }
+      document.getElementById("output").innerText = "Question 2 answered.";
+    };
+
+    function questionThree() {
+      try {
+        document.getElementById("output").innerText = hoistedVar;
+        var hoistedVar = "This is hoisted!";
+      } catch (e) {
+        document.getElementById("output").innerText = "Error due to hoisting!";
+      }
+    }
+
+    function reviewScore() {
+      document.getElementById("output").innerText = "Global Score: " + globalScore;
+    }
+
+    function tryLocalScore() {
+  try {
+    document.getElementById("output").innerText = "Local Score: " + localScore;
+  } catch (e) {
+    document.getElementById("output").innerText = "Error: localScore is not accessible!";
+  }
+}
+
+  </script>
+</body>
+</html>
