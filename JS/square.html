@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smallest or Square</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .input-container {
+      margin: auto;
+      width: 300px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    input, button {
+      margin: 10px 5px;
+      padding: 10px;
+      width: 100px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <h2>Smallest or Square</h2>
+  <input type="number" id="num1" placeholder="First number"><br>
+  <input type="number" id="num2" placeholder="Second number"><br>
+
+  <button onclick="checkSmallest()">Check</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  var globalA = 10;
+  var globalB = 20;
+
+  function checkSmallest() {
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+
+    if (isNaN(a) || isNaN(b)) {
+      document.getElementById("result").innerText = "Please enter both numbers!";
+      return;
+    }
+
+    let result;
+
+    if (a < b) {
+      result = a;
+    } else if (a > b) {
+      result = b;
+    } else {
+      result = a * a; 
+    }
+
+    console.log("Global variables:", globalA, globalB);
+    console.log("Local variables:", a, b);
+    document.getElementById("result").innerText = "Result: " + result;
+  }
+</script>
+
+</body>
+</html>
